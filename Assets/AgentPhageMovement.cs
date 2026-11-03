@@ -16,6 +16,7 @@ public class AgentPhageMovement : MonoBehaviour
     void Update()
     {
         float movementInput = Input.GetAxis("Horizontal") * movementSpeed;
+        //float movementInputx = Input.GetAxis("Vertical") * movementSpeed;
          rb.linearVelocity = new Vector3(-speed, rb.linearVelocity.y,movementInput);
     }
 }
