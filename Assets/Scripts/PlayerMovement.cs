@@ -19,4 +19,28 @@ public class PlayerMovement : MonoBehaviour
         float movementInputz = Input.GetAxis("Vertical") * movementSpeed;
         rb.linearVelocity = new Vector3(-speed, movementInputz, movementInput);
     }
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.name == "Left boundary")
+        {
+            Debug.Log("left boundary reached");
+            transform.Translate(1.0f,0.0f,1.0f, Space.Self);
+           
+        }
+         if (collider.gameObject.name == "Right boundary")
+         {
+             Debug.Log("right boundary reached");
+             transform.Translate(0.0f,0.0f,-1.0f, Space.Self);
+         }
+          if (collider.gameObject.name == "Top boundary")
+         {
+             Debug.Log("Top boundary reached");
+             transform.Translate(0.0f,-1.0f,00.0f, Space.Self);
+         }
+         if (collider.gameObject.name == "Bottom boundary")
+         {
+             Debug.Log("Bottom boundary reached");
+             transform.Translate(0.0f,1.0f,0.0f, Space.Self);
+         }
+    }
 }
