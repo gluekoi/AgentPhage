@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float movementInput = Input.GetAxis("Horizontal") * movementSpeed;
         float movementInputz = Input.GetAxis("Vertical") * movementSpeed;
-        rb.linearVelocity = new Vector3(-speed, movementInputz, movementInput);
+        rb.linearVelocity = new Vector3(movementInput, movementInputz, speed);
     }
     void OnTriggerEnter(Collider collider)
     {
