@@ -16,6 +16,6 @@ public class cancertest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         rb.linearVelocity = new Vector3(-speed, rb.linearVelocity.y , rb.linearVelocity.z);
+         rb.linearVelocity = new Vector3(rb.linearVelocity.x, rb.linearVelocity.y , speed);
     }
 }
