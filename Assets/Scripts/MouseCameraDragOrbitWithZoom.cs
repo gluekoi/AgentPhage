@@ -45,7 +45,7 @@ public class MouseCameraDragOrbitWithZoom  : MonoBehaviour
         /***********************************************************************************/
         //Manage Orbit aroudn target obj
         /***********************************************************************************/
-        //if (Input.GetMouseButton(0))
+        
         {
             //Simply use Input.mousePositionDelta in Unity 6
             velocityX += orbitSpeed * GetMousePositionDelta(Input.mousePosition).x * 0.02f;
