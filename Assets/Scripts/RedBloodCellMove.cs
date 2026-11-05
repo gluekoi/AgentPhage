@@ -16,13 +16,14 @@ public class RedBloodCellMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject obj;
+        //GameObject obj;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             obj = (GameObject)Instantiate(myPrefabObj); 
             obj.transform.position = new Vector3(Random.Range(-10.0f, 10.0f), 0, Random.Range(-10.0f, 10.0f));
             rb.linearVelocity = new Vector3(-speed, rb.linearVelocity.y, rb.linearVelocity.z);
-        }    
+        }  
+        */  
     }
 }
