@@ -12,6 +12,7 @@ public class ControlsMenuKeyboard : MonoBehaviour
     private string pressS = "ControlsSAnim";
     private string pressD = "ControlsDAnim";
     private string pressSpace = "ControlsSpaceAnim";
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,26 +25,60 @@ public class ControlsMenuKeyboard : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             anim.Play(pressW, 0, 0.0f);
+            this.keyButton.transform.GetChild(0).gameObject.SetActive(true);
+            this.keyButton.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            anim.Play(pressW, 0, 0.0f);
+            this.keyButton.transform.GetChild(0).gameObject.SetActive(false);
+            this.keyButton.transform.GetChild(1).gameObject.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
             anim.Play(pressA, 0, 0.0f);
+            this.keyButton.transform.GetChild(0).gameObject.SetActive(true);
+            this.keyButton.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            anim.Play(pressA, 0, 0.0f);
+            this.keyButton.transform.GetChild(0).gameObject.SetActive(false);
+            this.keyButton.transform.GetChild(1).gameObject.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
             anim.Play(pressS, 0, 0.0f);
+            this.keyButton.transform.GetChild(0).gameObject.SetActive(true);
+            this.keyButton.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            anim.Play(pressS, 0, 0.0f);
+            this.keyButton.transform.GetChild(0).gameObject.SetActive(false);
+            this.keyButton.transform.GetChild(1).gameObject.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
             anim.Play(pressD, 0, 0.0f);
+            this.keyButton.transform.GetChild(0).gameObject.SetActive(true);
+            this.keyButton.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            anim.Play(pressD, 0, 0.0f);
+            this.keyButton.transform.GetChild(0).gameObject.SetActive(false);
+            this.keyButton.transform.GetChild(1).gameObject.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.Play(pressSpace, 0, 0.0f);
         }
+
     }
+
 }
