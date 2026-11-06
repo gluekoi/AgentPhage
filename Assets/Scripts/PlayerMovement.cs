@@ -7,7 +7,13 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     public float movementSpeed;
+
+    public float rotationSpeed;
     private Rigidbody rb;
+
+
+    private Quaternion targetPos;
+    public Vector3 velocity = new Vector3(0, 0, 2);
 
     [SerializeField]
     bool spedUp = false;
@@ -15,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+      
     }
 
     // Update is called once per frame
@@ -22,8 +29,39 @@ public class PlayerMovement : MonoBehaviour
     {
         float movementInput = Input.GetAxis("Horizontal") * movementSpeed;
         float movementInputz = Input.GetAxis("Vertical") * movementSpeed;
-        rb.linearVelocity = new Vector3(movementInput, movementInputz, speed);
 
+        //rb.linearVelocity = new Vector3(movementInput, movementInputz, speed);
+        transform.position += transform.forward * (speed * Time.deltaTime);
+        Vector3  movementDirection = new Vector3(movementInput, movementInputz, 0);
+        movementDirection.Normalize();
+
+        transform.Translate(movementDirection * speed * Time.deltaTime, Space.Self);
+
+        if (movementDirection != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+            Quaternion currentRot = transform.rotation;
+            targetPos = new Quaternion(0, currentRot.y, 0, 1);
+
+        }
+
+        else
+        
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetPos, 0.1f);
+           
+
+        }
+
+      
+
+
+
+       
+
+      
          if (Input.GetKeyDown(KeyCode.Space))
 
          {
