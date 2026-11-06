@@ -33,7 +33,7 @@ public class KillaTmovement : MonoBehaviour
     {
         if (transform.position == playerPosition)
         {
-            Destroy(gameObject);
+            Destroy(player);
         }
     }
 }

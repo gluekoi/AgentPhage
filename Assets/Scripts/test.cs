@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class FreeLookCamera : MonoBehaviour
 {
-    public float sensitivity = 2.0f;
+    public float RotSpeed = 2.0f;
+
+    public float rotX;
+    public float rotY;
+
+    public Transform target;
 
     void Start()
     {
@@ -12,9 +17,19 @@ public class FreeLookCamera : MonoBehaviour
 
     void Update()
     {
-        float rotationY = Input.GetAxis("Mouse X") * sensitivity;
-        float rotationX = - Input.GetAxis("Mouse Y") * sensitivity;
+        rotX += Input.GetAxis("Mouse X") * RotSpeed;
+        rotY += Input.GetAxis("Mouse Y") * RotSpeed;
 
-        transform.rotation *= Quaternion.Euler(rotationX, rotationY, 0);
+        rotY = Mathf.Clamp(rotY, -35f, 35f);
+        rotX = Mathf.Clamp(rotX, -35f, 35f);
+
+        //Camera rotation only allowed if game us not paused
+        //Camera.transform.rotation = Quaternion.Euler(-rotY, 0f, 0f);
+        transform.rotation = Quaternion.Euler(-rotY, rotX, 0f);
+    }
+
+    private void FixedUpdate()
+    {
+        transform.LookAt(target);
     }
 }
