@@ -32,7 +32,7 @@ public class Generator : MonoBehaviour
         //random num generator
         segmentNum = Random.Range(0, 3);
         Instantiate(vessels[segmentNum], new Vector3(0, 0, zPos), Quaternion.identity);
-        zPos += 50;
+        zPos += 200;
         yield return new WaitForSeconds(3); //wait for 10 seconds before action
         creatingSegment = false; //restarts function
     }
