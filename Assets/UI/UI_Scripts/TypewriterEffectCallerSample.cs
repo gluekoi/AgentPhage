@@ -1,12 +1,12 @@
 //Sample script that calls our typewriter effect
 
 using UnityEngine;
+using TMPro;
 
 public class TypewriterEffectCallerSample : MonoBehaviour
 {
     [Tooltip("What we want to be written with a typewriter effect")]
-    [SerializeField]
-    string m_Message;
+    public string m_Message;
 
     [SerializeField]
     TypewriterEffect m_TypewriterEffect;
