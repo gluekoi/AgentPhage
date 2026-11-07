@@ -33,11 +33,11 @@ public class PlayerMovement : MonoBehaviour
         //rb.linearVelocity = new Vector3(movementInput, movementInputz, speed);
         transform.position += transform.forward * (speed * Time.deltaTime);
         Vector3 movementDirection = new Vector3(movementInput, movementInputz, 0);
-        movementDirection.Normalize();
+        //movementDirection.Normalize();
 
         transform.Translate(movementDirection * speed * Time.deltaTime, Space.Self);
 
-        if (movementDirection != Vector3.zero)
+       /* if (movementDirection != Vector3.zero)
         {
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
 
@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, targetPos, 0.08f);
 
 
-        }
+        }*/
 
 
 
