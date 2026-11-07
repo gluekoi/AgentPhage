@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        
 
     }
 
@@ -37,25 +38,25 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Translate(movementDirection * speed * Time.deltaTime, Space.Self);
 
-       /* if (movementDirection != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+        /* if (movementDirection != Vector3.zero)
+         {
+             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-            Quaternion currentRot = transform.rotation;
-            targetPos = new Quaternion(0, 0, 0, 1);
+             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+             Quaternion currentRot = transform.rotation;
+             targetPos = new Quaternion(0, 0, 0, 1);
 
-        }
+         }
 
-        else
+         else
 
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetPos, 0.08f);
-
-
-        }*/
+         {
+             transform.rotation = Quaternion.Lerp(transform.rotation, targetPos, 0.08f);
 
 
+         }*/
+
+       
 
 
 
@@ -107,12 +108,18 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Bottom boundary reached");
                 transform.Translate(0.0f, 1.0f, 0.0f, Space.Self);
             }
-           /* if (collider.gameObject.name == "rbc")
-            {
-                StartCoroutine(SlowPlayer());
-                Debug.Log("touch");
-            }*/
+
+        if (collider.gameObject.name == "Start")
+        {
+            StartCoroutine(PlayerFaster());
+            Debug.Log("Game Started");
         }
+        /* if (collider.gameObject.name == "rbc")
+         {
+             StartCoroutine(SlowPlayer());
+             Debug.Log("touch");
+         }*/
+    }
 
 
        /* IEnumerator SlowPlayer()
@@ -137,5 +144,24 @@ public class PlayerMovement : MonoBehaviour
             spedUp = false;
 
         }
+
+        IEnumerator PlayerFaster()
+    {
+        yield return new WaitForSeconds(10);
+        speed += 2;
+        Debug.Log("sped up");
+        yield return new WaitForSeconds(10);
+        speed += 2;
+        Debug.Log("sped up");
+        yield return new WaitForSeconds(10);
+        speed += 2;
+        Debug.Log("sped up");
+        yield return new WaitForSeconds(10);
+        speed += 2;
+        Debug.Log("sped up");
+        yield return new WaitForSeconds(10);
+        speed += 2;
+        Debug.Log("sped up");
+    }
     
 }
