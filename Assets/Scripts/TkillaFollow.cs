@@ -1,5 +1,8 @@
-using UnityEngine; 
- 
+using UnityEngine;
+using TMPro;
+using System.Collections;
+using System.Collections.Generic;
+
 public class SmoothFollow : MonoBehaviour 
 { 
    [SerializeField]
@@ -19,6 +22,11 @@ public class SmoothFollow : MonoBehaviour
 
 public Rigidbody rb;
  
+   
+    void Start()
+    {
+       
+    }
     void Update() 
     { 
       directionTarget = (target.transform.position - transform.position).normalized;
@@ -29,6 +37,8 @@ public Rigidbody rb;
       movement = transform.forward * speed;
 
       rb.linearVelocity = new Vector3(movement.x, movement.y, movement.z);
+
+       
     } 
 
     void OnTriggerEnter(Collider other)
@@ -38,6 +48,24 @@ public Rigidbody rb;
             Destroy(target);
             Debug.Log("touchies and died");
         }
+        if (other.gameObject.name == "Start")
+        {
+            StartCoroutine(TFaster());
+            Debug.Log("Tkilla start");
+        }
+    }
+    IEnumerator TFaster()
+    {
+        yield return new WaitForSeconds(10);
+        speed += 2;
+        yield return new WaitForSeconds(10);
+        speed += 2;
+        yield return new WaitForSeconds(10);
+        speed += 2;
+        yield return new WaitForSeconds(10);
+        speed += 2;
+        yield return new WaitForSeconds(10);
+        speed += 2;
     }
 
 
