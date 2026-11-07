@@ -31,12 +31,12 @@ public Rigidbody rb;
       rb.linearVelocity = new Vector3(movement.x, movement.y, movement.z);
     } 
 
-    private void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter(Collider other)
     {
-        if (collider.gameObject == target)
+        if (other.gameObject.CompareTag("Player"))
         {
             Destroy(target);
-            Debug.Log("touchies");
+            Debug.Log("touchies and died");
         }
     }
 
