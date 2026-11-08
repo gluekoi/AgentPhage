@@ -14,7 +14,7 @@ public class RedBloodCellMove : MonoBehaviour
 
 
     [SerializeField]
-    int zPos = 10;
+    int zPos = -5;
     [SerializeField]
     bool creatingRBCs = false;
 

@@ -22,6 +22,8 @@ public class PlayAnimationAndStartGame : MonoBehaviour
 
     public cancertest CancerTestScript;
 
+    public slowdown slowDownScript;
+
 
 
 
@@ -50,6 +52,7 @@ public class PlayAnimationAndStartGame : MonoBehaviour
         playerMovementScript.enabled = true;
         tKillaFollowScript.enabled = true;
         CancerTestScript.enabled = true;
+        slowDownScript.enabled = true;
 
         CameraAnim.gameObject.SetActive(false);
         GameCamera.gameObject.SetActive(true);
