@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class cancertest : MonoBehaviour
 {  
@@ -42,7 +43,7 @@ public class cancertest : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(cancer);
+            SceneManager.LoadScene(2);
             Debug.Log("YOU CAUGHT CANCER");
         }
     }

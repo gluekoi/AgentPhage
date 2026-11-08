@@ -33,10 +33,10 @@ public class TKillaSpikesPulse : MonoBehaviour
 
     // An editor-facing initial value, since the property would be hidden in the Inspector
     [SerializeField]
-    private float initialScaleTime = 5.0f;
+    private float initialScaleTime = 2.0f;
 
-    public Vector3 startingScale = Vector3.one * 1f;
-    public Vector3 endingScale = Vector3.one * 2f;
+    public Vector3 startingScale = Vector3.one * 0.6f;
+    public Vector3 endingScale = Vector3.one * 0.8f;
 
     private float lerpT = 0f;
 

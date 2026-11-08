@@ -45,7 +45,7 @@ public Rigidbody rb;
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(target);
+           
             Debug.Log("touchies and died");
         }
         if (other.gameObject.name == "Start")
