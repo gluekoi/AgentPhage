@@ -90,36 +90,27 @@ public class PlayerMovement : MonoBehaviour
             if (collider.gameObject.name == "Left boundary")
             {
                 Debug.Log("left boundary reached");
-                transform.Translate(-1.0f, 0.0f, 0.0f, Space.Self);
+                transform.Translate(2.0f, 0.0f, 0.0f, Space.Self);
 
             }
             if (collider.gameObject.name == "Right boundary")
             {
                 Debug.Log("right boundary reached");
-                transform.Translate(1.0f, 0.0f, 0.0f, Space.Self);
+                transform.Translate(-2.0f, 0.0f, 0.0f, Space.Self);
             }
             if (collider.gameObject.name == "Top boundary")
             {
                 Debug.Log("Top boundary reached");
-                transform.Translate(0.0f, -1.0f, 00.0f, Space.Self);
+                transform.Translate(0.0f, -2.0f, 00.0f, Space.Self);
             }
             if (collider.gameObject.name == "Bottom boundary")
             {
                 Debug.Log("Bottom boundary reached");
-                transform.Translate(0.0f, 1.0f, 0.0f, Space.Self);
+                transform.Translate(0.0f, 2.0f, 0.0f, Space.Self);
             }
 
-        if (collider.gameObject.name == "Start")
-        {
-            StartCoroutine(PlayerFaster());
-            Debug.Log("Game Started");
-        }
-        /* if (collider.gameObject.name == "rbc")
-         {
-             StartCoroutine(SlowPlayer());
-             Debug.Log("touch");
-         }*/
-    }
+     
+            }
 
 
        /* IEnumerator SlowPlayer()
@@ -145,23 +136,6 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        IEnumerator PlayerFaster()
-    {
-        yield return new WaitForSeconds(10);
-        speed += 2;
-        Debug.Log("sped up");
-        yield return new WaitForSeconds(10);
-        speed += 2;
-        Debug.Log("sped up");
-        yield return new WaitForSeconds(10);
-        speed += 2;
-        Debug.Log("sped up");
-        yield return new WaitForSeconds(10);
-        speed += 2;
-        Debug.Log("sped up");
-        yield return new WaitForSeconds(10);
-        speed += 2;
-        Debug.Log("sped up");
-    }
+     
     
 }
