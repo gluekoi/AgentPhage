@@ -17,7 +17,7 @@ public class TitleSceneSwitch : MonoBehaviour
     void Start()
     {
         fadeBetweenScenesScript = fadeManager.GetComponent<FadeBetweenScenesScript>();
-        myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/Scenes");
+        myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/Scenes");
         scenePaths = myLoadedAssetBundle.GetAllScenePaths();
     }
 
