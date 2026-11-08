@@ -43,7 +43,7 @@ public class cancertest : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
             Debug.Log("YOU CAUGHT CANCER");
         }
     }
