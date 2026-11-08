@@ -41,7 +41,7 @@ public class FadeBetweenScenesScript : MonoBehaviour
         fadeImageCanvas.alpha = startAlpha;
         yield return null;
 
-        yield return new WaitForSeconds(delayBeforeFade);
+        yield return new WaitForSecondsRealtime(delayBeforeFade);
         float timeElapsed = 0;
         while (timeElapsed < duration)
         {
