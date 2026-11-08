@@ -25366,6 +25366,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TitleSceneSwitch
   fadeBetweenScenesScript: {fileID: 0}
   fadeManager: {fileID: 1731742540}
+  startAlpha: 0
+  endAlpha: 1
+  duration: 2
+  delayBeforeFade: 4
 --- !u!1 &1736340790
 GameObject:
   m_ObjectHideFlags: 0

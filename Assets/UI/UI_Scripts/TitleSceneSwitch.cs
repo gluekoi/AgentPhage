@@ -4,6 +4,10 @@ public class TitleSceneSwitch : MonoBehaviour
 {
     public FadeBetweenScenesScript fadeBetweenScenesScript;
     [SerializeField] private GameObject fadeManager;
+    [SerializeField] private float startAlpha;
+    [SerializeField] private float endAlpha;
+    [SerializeField] private float duration;
+    [SerializeField] private float delayBeforeFade;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,9 +20,9 @@ public class TitleSceneSwitch : MonoBehaviour
         
     }
 
-    public void SwitchFromTitleToMainGame()
+    public void SwitchScenes()
     {
-        fadeBetweenScenesScript.DoFade(0.0f, 1.0f, 2.0f, 4.0f);
+        fadeBetweenScenesScript.DoFade(startAlpha, endAlpha, duration, delayBeforeFade);
         //Debug.Log("FUCK IM FADING");
     }
 }
