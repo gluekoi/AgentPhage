@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreenMERGE.unity
     guid: 94094eea090dd8648b0a66ec62facaee
   - enabled: 1
+    path: Assets/Scenes/ExpositionScene.unity
+    guid: 67d22dac2103067428f47b60e24fad63
+  - enabled: 1
     path: Assets/Scenes/GameMERGE.unity
     guid: 7fe543dd26b3a2042a04553c1e7ba772
   - enabled: 1
