@@ -17,7 +17,8 @@ public class SmoothFollow : MonoBehaviour
 
  private Vector3 movement;
 
- public int speed = 1;
+ [SerializeField]
+ private int speed = 1;
 
 
 public Rigidbody rb;

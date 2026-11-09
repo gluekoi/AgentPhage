@@ -43,7 +43,7 @@ public class slowdown : MonoBehaviour
         }
         if (other.gameObject.name == "Start")
         {
-            StartCoroutine(PlayerFaster());
+            
             Debug.Log("Player start");
         }
 
@@ -58,23 +58,6 @@ public class slowdown : MonoBehaviour
         slowedDown = false;
     }
 
-    IEnumerator PlayerFaster()
-    {
-        yield return new WaitForSeconds(10);
-        speed += 2;
-        Debug.Log("10 seconds passed");
-        yield return new WaitForSeconds(10);
-        speed += 2;
-        Debug.Log("20 seconds passed");
-        yield return new WaitForSeconds(10);
-        speed += 2;
-        Debug.Log("30 seconds passed");
-        yield return new WaitForSeconds(10);
-        speed += 2;
-        Debug.Log("40 seconds passed");
-        yield return new WaitForSeconds(10);
-        speed += 2;
-        Debug.Log("50 seconds passed");
-    }
+  
 
 }
