@@ -31,7 +31,7 @@ public class PlayAnimationAndStartGame : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        IntroAnim.Play("CameraMoveAnim");
+        IntroAnim.Play("IntroAnim");
         playerMovementScript = Player.GetComponent<PlayerMovement>();
         tKillaFollowScript = TKilla.GetComponent<SmoothFollow>();
         CancerTestScript = Tumor.GetComponent<cancertest>();
