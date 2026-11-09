@@ -22,6 +22,8 @@ public class SmoothFollow : MonoBehaviour
 
 
 public Rigidbody rb;
+
+[SerializeField] private GameObject gameOverScreen;
  
    
     void Start()
@@ -48,12 +50,15 @@ public Rigidbody rb;
         {
            
             Debug.Log("touchies and died");
+            gameOverScreen.SetActive(true);
+            
         }
         if (other.gameObject.name == "Start")
         {
             StartCoroutine(TFaster());
             Debug.Log("Tkilla start");
         }
+        
     }
     IEnumerator TFaster()
     {

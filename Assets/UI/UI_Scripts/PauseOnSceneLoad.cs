@@ -7,15 +7,16 @@ public class PauseOnSceneLoad : MonoBehaviour
 
     public bool isGameOver = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        Invoke(nameof(PauseGame), 0.5f);
+        Invoke(nameof(PauseGame), 0.25f);
         isGameOver = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Time.timeScale);
         if (gameOverMenu.activeSelf)
         {
             Invoke(nameof(PauseGame), 0.1f);

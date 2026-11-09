@@ -4,6 +4,7 @@ using Microsoft.Unity.VisualStudio.Editor;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FadeBetweenScenesScript : MonoBehaviour
 {
@@ -16,7 +17,16 @@ public class FadeBetweenScenesScript : MonoBehaviour
     [SerializeField] private float automaticFadeDuration;
     [SerializeField] private float automaticFadeDelayBeforeFade;
 
-    void Awake()
+    void Start()
+    {
+        if (automaticallyFadeInOnSceneLoad)
+        {
+            DoFade(automaticFadeStartAlpha, automaticFadeEndAlpha, automaticFadeDuration, automaticFadeDelayBeforeFade);
+        }
+        
+    }
+
+    void Reload()
     {
         if (automaticallyFadeInOnSceneLoad)
         {

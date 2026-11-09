@@ -1665,7 +1665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &1130230695810140421
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1988,7 +1988,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4309988147625918003}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -2622,7 +2622,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4481198177413028265}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cde2cdb8545d7c7438ba2f88faf640fd, type: 3}
   m_Name: 
@@ -2840,6 +2840,7 @@ MonoBehaviour:
   rotationSpeed: 3
   speed: 8
   rb: {fileID: 6704203353428330569}
+  gameOverScreen: {fileID: 5215866684832611777}
 --- !u!114 &1968247364856345000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3991,7 +3992,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press <color="blue">Spacebar</color> for Speed Boost
+  m_text: Press <color="yellow">Spacebar</color> for Speed Boost
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1c040804af20c19429cd84e940fe907c, type: 2}
   m_sharedMaterial: {fileID: 3701597915437125147, guid: 1c040804af20c19429cd84e940fe907c, type: 2}
@@ -4179,6 +4180,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ReloadScene, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4658,8 +4671,8 @@ RectTransform:
   m_GameObject: {fileID: 1572703316576783917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.02, y: 1.02, z: 1.02}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5894696163853857146}
   - {fileID: 4919205482443676749}
@@ -4667,7 +4680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -22, y: 0.17028809}
+  m_AnchoredPosition: {x: -16, y: 0.17028809}
   m_SizeDelta: {x: -68.854614, y: -322.87543}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &4044133898627008089
@@ -4746,7 +4759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3038fddfac189ab43a25981442a27e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterEffectCallerSample
-  m_Message: You only have sixty seconds to get that cell, Agent. Good luck
+  m_Message: You only have sixty seconds to get that cell, Agent. And watch out for
+    T-Killa behind you. Good luck
   m_TypewriterEffect: {fileID: 1034483873131171003}
   m_TypewriterAlgorithm: 0
 --- !u!23 &4143680641085468159
@@ -6235,13 +6249,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950944313988796471}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1506423b79a287b4fb567b4bcb253079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DelayUIEntrance
   hintWindow: {fileID: 520297010763272838}
   timer: {fileID: 8435090706755728237}
+  hintDialogue: {fileID: 6741423426218142296}
 --- !u!64 &5638976245513862919
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6334,7 +6349,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6965965618845635892}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7201,12 +7216,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950944313988796471}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25ae679722f709247a7d613c438a7b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Countdown
-  countdown: 10
+  countdown: 13
   timerTMP: {fileID: 2140921391704451634}
   gameOverScreen: {fileID: 5215866684832611777}
 --- !u!222 &6539739843884984561
@@ -7277,7 +7292,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4101536192613801435}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -8297,7 +8312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16, y: -9}
+  m_AnchoredPosition: {x: 2, y: -9}
   m_SizeDelta: {x: 68.8546, y: 322.8754}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!33 &7886529824179172566
@@ -8427,7 +8442,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950944313988796471}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81c60b82a9eb04146a6e0dbf0c169554, type: 3}
   m_Name: 
@@ -8439,6 +8454,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 5215866684832611777}
   countdownReachZero: 0
   deathCounter: 1
+  tKilla: {fileID: 0}
 --- !u!222 &8013956023446150927
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9434,7 +9450,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: move with <color="blue">WASD</color> or <color="blue">arrow keys</color>
+  m_text: move with <color="yellow">WASD</color> or <color="yellow">arrow keys</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1c040804af20c19429cd84e940fe907c, type: 2}
   m_sharedMaterial: {fileID: 3701597915437125147, guid: 1c040804af20c19429cd84e940fe907c, type: 2}

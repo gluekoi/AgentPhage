@@ -17,12 +17,15 @@ public class DeathMethodTracker : MonoBehaviour
     public bool countdownReachZero = false;
 
     public int deathCounter = 1;
+
+    [SerializeField] private GameObject tKilla;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         countdownScript = mainMenuManager.GetComponent<Countdown>();
         typewriterMessageBox = typewriterEffectManager.GetComponent<TypewriterEffectCallerSample>();
         countdownReachZero = false;
+
     }
 
     // Update is called once per frame
@@ -41,17 +44,19 @@ public class DeathMethodTracker : MonoBehaviour
 
     void DeathByTime()
     {
-        Debug.Log("Time comes for us all");
+        //Debug.Log("Time comes for us all");
         gameOverScreen.SetActive(true);
-        deathCounter += 1;
+        //deathCounter += 1;
         typewriterMessageBox.m_Message = "Deploying Agent Phage " + deathCounter + "." + "Remember, Agent, you only have so much time to get to that cell!";
     }
 
     void DeathByTKilla()
     {
-        Debug.Log("Curse that TKilla!");
+        //Debug.Log("Curse that TKilla!");
         gameOverScreen.SetActive(true);
-        deathCounter += 1;
+        //deathCounter += 1;
         typewriterMessageBox.m_Message = "Drat! Your predecessor was endocytosed by T-Killa, Agent Phage " + deathCounter + ". We used to be good friends until.. well... anyways! Keep your focus on the mission, Agent, and avoid getting caught by T-Killa!"; 
     }
+
+
 }

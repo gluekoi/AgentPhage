@@ -10,7 +10,10 @@ public class StartSyringeAnim : MonoBehaviour
     [SerializeField] private Camera mainCamera;
     [SerializeField] private Animator cameraAnim;
 
-    private string inject = "CameraMoveAnim";
+
+    private string inject = "MariaSyringeCameraAnim";
+
+    [SerializeField] private GameObject plane;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,5 +49,7 @@ public class StartSyringeAnim : MonoBehaviour
         }*/
         //mainCamera.transform.GetComponent<Animator>().enabled = true;
         cameraAnim.Play(inject, 0, 0.0f);
+        plane.SetActive(false);
+    
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ReloadScene : MonoBehaviour
 {
@@ -22,5 +23,6 @@ public class ReloadScene : MonoBehaviour
     public void LoadMainGame()
     {
         Debug.Log("Reload gameplay scene");
+        SceneManager.LoadScene(2);
     }
 }

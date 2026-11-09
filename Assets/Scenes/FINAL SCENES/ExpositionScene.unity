@@ -626,7 +626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183, y: -28}
+  m_AnchoredPosition: {x: -183, y: -31.3}
   m_SizeDelta: {x: 94.774, y: 116.6449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &473012682173374640
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3038fddfac189ab43a25981442a27e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterEffectCallerSample
-  m_Message: As you already know, <b><color="red">King Karcinoma</color></b> continues
+  m_Message: As you already know, <b><color="yellow">King Karcinoma</color></b> continues
     to grow increasingly dangerous by the second
   m_TypewriterEffect: {fileID: 5973724805914571616}
   m_TypewriterAlgorithm: 0
@@ -1129,8 +1129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3038fddfac189ab43a25981442a27e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterEffectCallerSample
-  m_Message: Come in, Agent Phage! Have you successfully infiltrated the femoral
-    artery?
+  m_Message: Come in, Agent Phage! Have you successfully infiltrated the cephalic
+    vein?
   m_TypewriterEffect: {fileID: 5973724805914571616}
   m_TypewriterAlgorithm: 0
 --- !u!1 &2983386593393994252
