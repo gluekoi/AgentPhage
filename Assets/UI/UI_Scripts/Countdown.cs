@@ -22,7 +22,7 @@ public class Countdown : MonoBehaviour
 
     public void CountingDown()
     {
-        Debug.Log("Testing Countdown");
+        //Debug.Log("Testing Countdown");
         countdown -= 1;
 
         if(countdown == 0)
